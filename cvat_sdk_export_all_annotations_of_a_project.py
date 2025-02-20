@@ -23,7 +23,7 @@ with make_client(host, port=port, credentials=(user, password)) as client:
     for task in tasks: # Export each task's annotations separately
         task_name = os.path.splitext(task.name)[0] # I assume that my task name is like 'abc.mp4', and I want to strip the extension
         # print("here!")
-        output_file = os.path.join(output_dir, f'{task.name}.xml')
+        output_file = os.path.join(output_dir, f'{task_name}.xml')
         # output_file = os.path.join(output_dir, f'task_{task.id}_annotations.xml') # OR
 
         # Export task annotations without images
